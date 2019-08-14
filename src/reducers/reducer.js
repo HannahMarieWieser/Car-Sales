@@ -1,14 +1,11 @@
-export const reducer = (state = initialState, action) => {
+import {ADD_FEATURE, ADDITIONAL_FEATURE} from '../actions/index'
+
+export default (state = initialState, action) => {
     switch(action.type) {
         case 'ADD_FEATURE':
             return {
                 ...state, 
                 features: action.payload};
-        case 'REMOVE_FEATURE':
-            return {
-                ...state, 
-                features: action.features}
-        '
         default: 
             return state
 
@@ -31,3 +28,4 @@ export const initialState = {
       { id: 4, name: 'Rear spoiler', price: 250 }
     ]
 };
+
